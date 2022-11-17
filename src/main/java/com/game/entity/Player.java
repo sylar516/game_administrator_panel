@@ -4,12 +4,13 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-@org.hibernate.annotations.NamedQueries({
-        @org.hibernate.annotations.NamedQuery(name = "Player_getAllCount",
-        query = "select count(*) from Player")
-})
+
 @Entity
 @Table(name = "player", schema = "rpg")
+@org.hibernate.annotations.NamedQueries({
+        @org.hibernate.annotations.NamedQuery(name = "Player_getAllCount",
+                query = "select count(id) from Player")
+})
 public class Player {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
