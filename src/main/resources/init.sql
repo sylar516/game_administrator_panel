@@ -1,3 +1,6 @@
+DROP SCHEMA IF EXISTS rpg;
+CREATE SCHEMA rpg;
+
 DROP TABLE IF EXISTS rpg.player;
 CREATE TABLE rpg.player (
     id bigint primary key auto_increment not null,
