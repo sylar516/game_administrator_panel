@@ -1,3 +1,15 @@
+DROP TABLE IF EXISTS rpg.player;
+CREATE TABLE rpg.player (
+    id bigint primary key auto_increment not null,
+    name varchar(12) not null,
+    title varchar(30) not null,
+    race int not null,
+    profession int not null,
+    birthday date not null,
+    banned tinyint(1) not null,
+    level int not null
+);
+
 INSERT INTO rpg.player (id, name, title, race, profession, birthday, level, banned)
 VALUES (1, 'Ниус', 'Приходящий Без Шума', 6, 1, '2009-06-09 00:44:40.000000', 33, 0),
        (2, 'Никрашш', 'НайтВульф', 4, 0, '2006-07-09 08:50:40.000000', 58, 0),
